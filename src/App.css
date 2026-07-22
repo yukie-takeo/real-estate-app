@@ -1,0 +1,271 @@
+/* 認証画面（ログイン・会員登録）共通スタイル */
+.auth-page {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+}
+
+.auth-form h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.auth-form label {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.auth-form input {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+.auth-form input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.auth-form button {
+  margin-top: 16px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.auth-form button:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.auth-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-error {
+  color: var(--danger);
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+
+.auth-info {
+  color: var(--accent);
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+
+.auth-switch {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.auth-switch a {
+  color: var(--accent);
+}
+
+/* 読み込み中表示 */
+.loading-screen {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 物件一覧画面 */
+.property-page {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.property-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.property-header h1 {
+  font-size: 28px;
+}
+
+.property-header-user {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.property-header button {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--text-h);
+}
+
+.property-header button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.property-card {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.property-card h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.property-card-rent {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.property-card-area {
+  font-size: 14px;
+}
+
+.property-card-layout {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.property-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.property-card-actions button {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+.property-card-actions button:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.property-card-actions button.danger:hover:not(:disabled) {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.property-card-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 物件登録・編集フォーム */
+.property-create {
+  margin-bottom: 24px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card-bg);
+}
+
+.property-create h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.property-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.property-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.property-form-row label {
+  font-size: 13px;
+}
+
+.property-form-row input {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+.property-form-row input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.property-form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.property-form-actions button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.property-form-actions button:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.property-form-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.property-form-actions button.secondary {
+  background: var(--bg);
+  color: var(--text-h);
+  border: 1px solid var(--border);
+}
